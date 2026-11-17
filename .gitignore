@@ -10,7 +10,7 @@ build/
 *.ipr
 
 # Local H2 Database files
-data/
+mdata/
 *.mv.db
 *.trace.db
 
