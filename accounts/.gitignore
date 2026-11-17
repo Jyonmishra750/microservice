@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+# Ignore all local properties files across all microservices
+**/src/main/resources/application-local.properties
