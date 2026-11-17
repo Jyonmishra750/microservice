@@ -62,8 +62,8 @@ public class AccountsServiceImpl implements AccountsService {
             newAccount.setAccountType(accountType);
 
             // Required because Audit has nullable = false (until @EnableJpaAuditing is configured)
-            newAccount.setCreatedAt(LocalDateTime.now());
-            newAccount.setCreatedBy("SYSTEM");
+            /*newAccount.setCreatedAt(LocalDateTime.now());
+            newAccount.setCreatedBy("SYSTEM");*/
 
             Accounts savedAccount = accountsRepository.save(newAccount);
 
@@ -141,8 +141,8 @@ public class AccountsServiceImpl implements AccountsService {
                 existingAccount.setBranchAddress(requestDTO.getBranchAddress());
             }
 
-            existingAccount.setUpdatedAt(LocalDateTime.now());
-            existingAccount.setUpdatedBy("SYSTEM");
+            /*existingAccount.setUpdatedAt(LocalDateTime.now());
+            existingAccount.setUpdatedBy("SYSTEM");*/
 
             Accounts updatedAccount = accountsRepository.save(existingAccount);
             return new ResponseDTO(HttpStatus.OK.value(), updatedAccount, "Account updated successfully");

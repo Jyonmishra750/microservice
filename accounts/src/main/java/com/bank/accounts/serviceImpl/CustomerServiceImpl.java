@@ -74,8 +74,8 @@ public class CustomerServiceImpl implements CustomerService {
             customer.setMobileNumber(mobileNumber);
 
             // Required because Audit columns are nullable = false
-            customer.setCreatedAt(LocalDateTime.now());
-            customer.setCreatedBy("SYSTEM");
+            /*customer.setCreatedAt(LocalDateTime.now());
+            customer.setCreatedBy("SYSTEM");*/
 
             Customer savedCustomer = customerRepository.save(customer);
 
@@ -193,8 +193,8 @@ public class CustomerServiceImpl implements CustomerService {
                 existingCustomer.setMobileNumber(newMobile);
             }
 
-            existingCustomer.setUpdatedAt(LocalDateTime.now());
-            existingCustomer.setUpdatedBy("SYSTEM");
+            /*existingCustomer.setUpdatedAt(LocalDateTime.now());
+            existingCustomer.setUpdatedBy("SYSTEM");*/
 
             Customer updatedCustomer = customerRepository.save(existingCustomer);
 
